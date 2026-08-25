@@ -1,5 +1,9 @@
 # EE Portfolio — Reed McFarland
 
+Static HTML/CSS portfolio of electrical engineering projects, with an editorial design inspired by IEEE Spectrum magazine.
+
+## Structure
+
 ```
 index.html                  Landing page (masthead, about, project grid)
 css/style.css               Single stylesheet (magazine theme)
