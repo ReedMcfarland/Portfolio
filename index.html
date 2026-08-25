@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reed McFarland — Electrical Engineering Portfolio</title>
+  <meta name="description" content="Portfolio of Reed McFarland, electrical engineering student at the University of Tennessee, Knoxville: PCB design, FPGA/HDL, PCB motors, and competition robotics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <span>Engineering Portfolio</span>
+      <span>Electrical Engineering &middot; University of Tennessee, Knoxville</span>
+    </div>
+  </div>
+
+  <header class="masthead">
+    <div class="container masthead-inner">
+      <h1 class="masthead-title"><a href="index.html">Reed McFarland<span class="accent-dot">.</span></a></h1>
+      <p class="masthead-tagline">PCB Design &middot; FPGA &amp; HDL &middot; Motors &middot; Robotics</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="projects/pcb-drone.html">PCB Drone</a></li>
+        <li><a href="projects/shifting-swerve.html">2-Speed Swerve</a></li>
+        <li><a href="projects/frc-2024.html">FRC 2024</a></li>
+        <li><a href="projects/frc-2023.html">FRC 2023</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <span class="kicker">About</span>
+        <div class="editorial-intro">
+          <div>
+            <h2>Electrical Engineering Student - PCB, FPGA &amp; Robotics</h2>
+            <p>I'm an electrical engineering student at the University of Tennessee, Knoxville. My projects range from PCB-level design - including a drone whose motors are built directly into the circuit board as copper-trace stators - to competition robotics mechanisms designed in CAD and manufactured on CNC and additive equipment.</p>
+            <p>My favorite projects are ones that fit complex systems into small packaging: making a PCB drone that fits motors, control, and communication into as small a area as posible, or the packaging a shifting swereve drive.</p>
+            <p> write-ups of each project are below. Reach me at <a href="mailto:rmcfarl3@vols.utk.edu">rmcfarl3@vols.utk.edu</a>, or find my CAD, code, and PCBs on <a href="https://grabcad.com/reed_mcfarland-1">GrabCAD</a> and <a href="https://github.com/ReedMcfarland">GitHub</a>.</p>
+          </div>
+          <aside class="intro-sidebar">
+            <h3>At a Glance</h3>
+            <ul>
+              <li><strong>Education:</strong> Electrical Engineering, University of Tennessee, Knoxville</li>
+              <li><strong>Projects Focus:</strong> PCB design, FPGA / HDL, robotics mechanisms</li>
+              <li><strong>Tools:</strong> KiCad, Fusion 360, Python, CNC &amp; 3D printing</li>
+              <li><strong>Email:</strong> <a href="mailto:rmcfarl3@vols.utk.edu">rmcfarl3@vols.utk.edu</a></li>
+              <li><strong>Phone:</strong> 865-266-7691</li>
+              <li><strong>Links:</strong> <a href="https://github.com/ReedMcfarland">GitHub</a> &middot; <a href="https://grabcad.com/reed_mcfarland-1">GrabCAD</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section" id="projects">
+      <div class="container">
+        <span class="kicker">Featured Projects</span>
+
+        <div class="project-grid">
+
+          <!-- Lead feature -->
+          <article class="feature-card lead">
+            <figure class="figure">
+              <div class="img-placeholder" data-label="Photo: pcb-drone.jpg">
+                <img src="assets/images/pcb-drone.jpg" alt="PCB drone with motor stators etched directly into the circuit board">
+              </div>
+              <figcaption class="caption">The PCB drone: motor stators, control electronics, IMU, and radio on a single 75&thinsp;&times;&thinsp;75&thinsp;mm board.</figcaption>
+            </figure>
+            <div>
+              <p class="card-kicker">PCB Design &middot; FPGA</p>
+              <h3><a href="projects/pcb-drone.html">PCB Axial-Flux Motor Drone</a></h3>
+              <p class="dek">A working drone built out of a single 75&thinsp;&times;&thinsp;75&thinsp;mm PCB: the motor stators are etched into the  copper traces, and an FPGA drives all four motors in parallel with VHDL-coded flight control and sensor fusion. Everything is on the one board except the rotors and battery.</p>
+              <a class="read-more" href="projects/pcb-drone.html">View project</a>
+            </div>
+          </article>
+
+          <!-- Feature 2 -->
+          <article class="feature-card">
+            <figure class="figure">
+              <div class="img-placeholder" data-label="Photo: swerve-drive.jpg">
+                <img src="assets/images/swerve-drive.jpg" alt="2-speed shifting swerve drive module">
+              </div>
+              <figcaption class="caption">The 2-speed swerve module: inverted-style design with a pneumatically actuated ball-shifter.</figcaption>
+            </figure>
+            <p class="card-kicker">Robotics &middot; Mechanical Design</p>
+            <h3><a href="projects/shifting-swerve.html">2-Speed Swerve Drive</a></h3>
+            <p class="dek">A shifting swerve drive that resolves the speed-versus-torque tradeoff: a pneumatic ball-shifter switches between a 7.66&thinsp;ft/s low gear and an 18.03&thinsp;ft/s high gear, in a low-profile module refined across two design revisions.</p>
+            <a class="read-more" href="projects/shifting-swerve.html">View project</a>
+          </article>
+
+          <!-- Feature 3 -->
+          <article class="feature-card">
+            <figure class="figure">
+              <div class="img-placeholder" data-label="Photo: frc-2024.jpg">
+                <img src="assets/images/frc-2024.jpg" alt="FRC 2024 competition robot">
+              </div>
+              <figcaption class="caption">The 2024 robot: shifting swerve drivetrain, 2-sided intake, and 2-stage cascading elevator.</figcaption>
+            </figure>
+            <p class="card-kicker">Competition Robotics</p>
+            <h3><a href="projects/frc-2024.html">FRC 2024 Robot</a></h3>
+            <p class="dek">A competition robot built on the shifting swerve drivetrain, with a 2-sided intake and a 2-stage cascading elevator - designed in Fusion 360 and manufactured on CNC mill, lathe, water jet, fiber laser, and SLS/FDM 3D printers.</p>
+            <a class="read-more" href="projects/frc-2024.html">View project</a>
+          </article>
+
+          <!-- Feature 4 -->
+          <article class="feature-card">
+            <figure class="figure">
+              <div class="img-placeholder" data-label="Photo: frc-2023.jpg">
+                <img src="assets/images/frc-2023.jpg" alt="FRC 2023 competition robot with three-jointed arm">
+              </div>
+              <figcaption class="caption">The 2023 robot's 3-jointed arm, with every joint driven from the base.</figcaption>
+            </figure>
+            <p class="card-kicker">Competition Robotics</p>
+            <h3><a href="projects/frc-2023.html">FRC 2023 Robot</a></h3>
+            <p class="dek">A competition robot featuring a 3-jointed arm with all joints driven from the base, keeping mass low and centralized - built with the same shifting swerve drivetrain and CNC/additive manufacturing workflow.</p>
+            <a class="read-more" href="projects/frc-2023.html">View project</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CURRENT PROJECTS ================= -->
+    <section class="section" id="current">
+      <div class="container">
+        <span class="kicker">Current Projects</span>
+        <ul class="current-list">
+          <li class="current-item">
+            <div>
+              <h3>PCB Axial-Flux Motor Drone</h3>
+              <p>Currently prototyping the 6-layer board.</p>
+            </div>
+            <span class="status-tag">Prototype</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-brand">Reed McFarland</span>
+      <span><a href="mailto:rmcfarl3@vols.utk.edu">rmcfarl3@vols.utk.edu</a> &middot; 865-266-7691</span>
+      <span><a href="https://github.com/ReedMcfarland">GitHub</a> &middot; <a href="https://grabcad.com/reed_mcfarland-1">GrabCAD</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>

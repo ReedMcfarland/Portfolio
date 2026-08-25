@@ -1,0 +1,622 @@
+/* ==========================================================================
+   REED McFARLAND — EE PORTFOLIO
+   Modern Portfolio Theme
+   ========================================================================== */
+
+:root {
+  --ink: #111827;
+  --ink-soft: #4b5563;
+  --paper: #ffffff;
+  --bg-subtle: #f9fafb;
+  --accent: #2563eb;          /* Modern Tech Blue */
+  --accent-dark: #1d4ed8;
+  --rule: #e5e7eb;            
+  --rule-light: #f3f4f6;
+  --placeholder: #e5e7eb;     
+  --serif: "Merriweather", Georgia, "Times New Roman", serif;
+  --sans: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg-subtle);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Masthead & navigation
+   -------------------------------------------------------------------------- */
+
+.top-bar {
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+
+.top-bar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.masthead {
+  background: var(--paper);
+  padding: 5rem 0 3rem;
+}
+
+.masthead-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.masthead-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  letter-spacing: -0.03em;
+}
+
+.masthead-title a {
+  color: var(--ink);
+}
+
+.masthead-title .accent-dot {
+  color: var(--accent);
+}
+
+.masthead-tagline {
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  font-weight: 400;
+}
+
+.main-nav {
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  padding: 1rem 0;
+}
+
+.main-nav a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  padding-bottom: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--accent);
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   Section headers
+   -------------------------------------------------------------------------- */
+
+.section {
+  padding: 6rem 0;
+}
+
+.kicker {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.3rem;
+}
+
+/* --------------------------------------------------------------------------
+   About 
+   -------------------------------------------------------------------------- */
+
+.editorial-intro {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.editorial-intro h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.editorial-intro p {
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+}
+
+.editorial-intro .lede,
+.editorial-intro .drop-cap::first-letter {
+  font-style: normal;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  float: none;
+  line-height: inherit;
+  padding: 0;
+  color: inherit;
+}
+
+.intro-sidebar {
+  background: var(--paper);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--rule);
+}
+
+.intro-sidebar h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.intro-sidebar ul {
+  list-style: none;
+}
+
+.intro-sidebar li {
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   Project grid — Modern Cards
+   -------------------------------------------------------------------------- */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--rule-light);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card .figure {
+  margin: 0;
+}
+
+.feature-card .figure img {
+  border-radius: 0;
+}
+
+.feature-card .caption {
+  display: none; /* Hide captions on cards to make them cleaner */
+}
+
+.feature-card > div, 
+.feature-card > h3, 
+.feature-card > p, 
+.feature-card > a {
+  padding: 0 1.5rem;
+}
+
+.feature-card.lead {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  gap: 0;
+}
+
+.feature-card.lead > div {
+  padding: 3rem;
+}
+
+.feature-card .card-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding: 1.5rem 1.5rem 0;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card.lead .card-kicker {
+  padding-top: 0;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card.lead h3 {
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+}
+
+.feature-card h3 a {
+  color: var(--ink);
+}
+
+.feature-card h3 a:hover {
+  color: var(--accent);
+}
+
+.feature-card .dek {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.read-more {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent);
+}
+
+.read-more::after {
+  content: " \2192";
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.read-more:hover::after {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   Current projects 
+   -------------------------------------------------------------------------- */
+
+.current-list {
+  list-style: none;
+  background: var(--paper);
+  border-radius: 16px;
+  padding: 0 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--rule-light);
+}
+
+.current-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--rule-light);
+}
+
+.current-item:last-child {
+  border-bottom: none;
+}
+
+.current-item h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.current-item p {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  max-width: 70ch;
+}
+
+.status-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  background: #eff6ff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Images & captions
+   -------------------------------------------------------------------------- */
+
+.img-placeholder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  background: var(--placeholder);
+  overflow: hidden;
+}
+
+.img-placeholder img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.caption {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  padding: 0.75rem 1.5rem 1.5rem;
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Article pages (project sub-pages)
+   -------------------------------------------------------------------------- */
+
+.article-header {
+  padding: 4rem 0 2rem;
+}
+
+.article-header h1 {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  max-width: 20ch;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.article-header .dek {
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  max-width: 65ch;
+  margin-bottom: 1.5rem;
+}
+
+.byline {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.byline .author {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 2rem 0 0;
+  color: var(--ink-soft);
+}
+
+.back-link::before {
+  content: "\2190";
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+.back-link:hover::before {
+  transform: translateX(-4px);
+}
+
+.article-body {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr);
+  gap: 4rem;
+  padding: 3rem 0;
+}
+
+.article-text h2 {
+  font-size: 1.75rem;
+  margin: 2.5rem 0 1rem;
+  letter-spacing: -0.01em;
+}
+
+.article-text h2:first-child {
+  margin-top: 0;
+}
+
+.article-text p {
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+}
+
+.article-text ul {
+  margin: 0 0 1.25rem 1.5rem;
+  font-size: 1.05rem;
+}
+
+.article-text li {
+  margin-bottom: 0.5rem;
+}
+
+/* Technical specifications table */
+
+.spec-box {
+  background: var(--paper);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--rule-light);
+  margin-bottom: 2.5rem;
+}
+
+.spec-box h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.75rem;
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.spec-table th,
+.spec-table td {
+  text-align: left;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--rule-light);
+  vertical-align: top;
+}
+
+.spec-table th {
+  font-weight: 600;
+  padding-right: 1.5rem;
+  color: var(--ink);
+}
+
+.spec-table td {
+  color: var(--ink-soft);
+}
+
+.pull-quote {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  border-left: 4px solid var(--accent);
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  margin: 3rem 0;
+  color: var(--ink);
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0.05) 0%, transparent 100%);
+  border-top: none;
+  border-bottom: none;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.site-footer {
+  background: var(--paper);
+  border-top: 1px solid var(--rule);
+  padding: 3rem 0;
+  margin-top: 4rem;
+}
+
+.site-footer .footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.site-footer .footer-brand {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 820px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card.lead {
+    grid-template-columns: 1fr;
+  }
+  
+  .feature-card.lead > div {
+    padding: 2rem 1.5rem;
+  }
+
+  .editorial-intro {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .article-body {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav ul {
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+  
+  .current-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

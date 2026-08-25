@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2-Speed Swerve Drive — Reed McFarland</title>
+  <meta name="description" content="A 2-speed shifting swerve drive with a pneumatic ball-shifter: 7.66 ft/s low gear, 18.03 ft/s high gear, refined across two design revisions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <span>Engineering Portfolio</span>
+      <span>Project &middot; 2-Speed Swerve</span>
+    </div>
+  </div>
+
+  <header class="masthead">
+    <div class="container masthead-inner">
+      <h1 class="masthead-title"><a href="../index.html">Reed McFarland<span class="accent-dot">.</span></a></h1>
+      <p class="masthead-tagline">PCB Design &middot; FPGA &amp; HDL &middot; Motors &middot; Robotics</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="pcb-drone.html">PCB Drone</a></li>
+        <li><a href="shifting-swerve.html" class="active">2-Speed Swerve</a></li>
+        <li><a href="frc-2024.html">FRC 2024</a></li>
+        <li><a href="frc-2023.html">FRC 2023</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="article-header">
+      <div class="container">
+        <span class="kicker">Robotics &middot; Mechanical Design</span>
+        <h1>2-Speed Swerve Drive</h1>
+        <p class="dek">Standard swerve drives force a compromise between high top speed for cycling and high torque for defensive play or precise slow movement. This module solves it with a pneumatically shifted 2-speed gearbox: 7.66&thinsp;ft/s in low gear, 18.03&thinsp;ft/s in high.</p>
+        <p class="byline"><span class="author">Skills:</span> Mechanical Design &middot; Fusion 360 CAD &middot; CNC &amp; 3D Printing &middot; Python Simulation</p>
+        <a class="back-link" href="../index.html">Back to all projects</a>
+      </div>
+    </header>
+
+    <div class="container article-body">
+
+      <div class="article-text">
+
+        <figure class="figure">
+          <div class="img-placeholder wide" data-label="Photo: swerve-drive.jpg">
+            <img src="../assets/images/swerve-drive.jpg" alt="The 2-speed shifting swerve drive module">
+          </div>
+          <figcaption class="caption">The shifting swerve module. The inverted-style design keeps it low-profile and protected behind bumpers.</figcaption>
+        </figure>
+
+        <h2>Why Shift?</h2>
+        <p>A swerve drivetrain geared for top speed gives up torque for pushing matches and fine positioning; geared for torque, it gives up cycle time. Adding the ability to shift between two gears removes the compromise: a low gear for acceleration and low-speed torque, and a high gear for fast cycling across the field.</p>
+
+        <h2>Features</h2>
+        <ul>
+          <li><strong>Pneumatically actuated ball-shifter</strong> for shifting between the two gears mid-match.</li>
+          <li><strong>Low-profile module</strong> - easy integration with over-the-bumper intakes and increased protection behind bumpers.</li>
+          <li><strong>5&thinsp;in pneumatic wheel</strong> for terrain handling and longer-lasting tires, with alternative gearing worked out for 125&thinsp;mm (~5&thinsp;in) wheel configurations.</li>
+          <li><strong>Custom Python simulations</strong> used to select gearing and predict drivetrain performance.</li>
+        </ul>
+
+        <h2>Version 1</h2>
+        <p>The first revision set out to improve on the 2021&ndash;2022 season designs with three goals: lower the drivetrain's center of gravity, open up space above the bumpers, and protect the modules from damage. It hit its free-speed targets of 7.66&thinsp;ft/s in low gear and 18.03&thinsp;ft/s in high gear.</p>
+
+        <figure class="figure">
+          <div class="img-placeholder" data-label="Photo: swerve-v1.jpg">
+            <img src="../assets/images/swerve-v1.jpg" alt="Version 1 of the shifting swerve module">
+          </div>
+          <figcaption class="caption">Version 1: lower center of gravity and protected modules, at the cost of manufacturing complexity.</figcaption>
+        </figure>
+
+        <h2>Version 2</h2>
+        <p>The second revision kept the inverted-style module for its protective benefits and reworked the mechanisms around it:</p>
+        <ul>
+          <li><strong>Azimuth drive:</strong> upgraded from a pulley system to gears, reducing manufacturing complexity.</li>
+          <li><strong>Shifter output:</strong> chain drive replaced with gears for increased efficiency, decreased weight, and no tensioner to maintain.</li>
+          <li><strong>Motor placement:</strong> motors relocated from the module edges to the center, so a motor can be removed without overhead or rear clearance, and raised from the main plate to the top plate for better protection.</li>
+          <li><strong>Wheel placement:</strong> moved further inward to optimize space and reduce weight.</li>
+        </ul>
+        <p>Free speeds are unchanged from V1 - 7.66&thinsp;ft/s low, 18.03&thinsp;ft/s high - with the improvements going to reliability, weight, and serviceability.</p>
+
+        <figure class="figure">
+          <div class="img-placeholder" data-label="Photo: swerve-v2.jpg">
+            <img src="../assets/images/swerve-v2.jpg" alt="Version 2 of the shifting swerve module with gear-driven azimuth">
+          </div>
+          <figcaption class="caption">Version 2: gear-driven azimuth, centered motors, and a chain-free shifter output.</figcaption>
+        </figure>
+
+      </div>
+
+      <aside>
+        <div class="spec-box">
+          <h3>Technical Specifications</h3>
+          <table class="spec-table">
+            <tr><th>Type</th><td>2-speed shifting swerve module, inverted-style</td></tr>
+            <tr><th>Low gear</th><td>7.66&thinsp;ft/s free speed</td></tr>
+            <tr><th>High gear</th><td>18.03&thinsp;ft/s free speed</td></tr>
+            <tr><th>Shifter</th><td>Pneumatically actuated ball-shifter</td></tr>
+            <tr><th>Wheel</th><td>5&thinsp;in pneumatic; 125&thinsp;mm gearing options</td></tr>
+            <tr><th>Azimuth</th><td>Gear-driven (V2; pulley in V1)</td></tr>
+            <tr><th>Output drive</th><td>Gears on shifter output (V2; chain in V1)</td></tr>
+            <tr><th>Design</th><td>Fusion 360 CAD</td></tr>
+            <tr><th>Manufacturing</th><td>CNC and 3D printing</td></tr>
+            <tr><th>Analysis</th><td>Custom Python drivetrain simulations</td></tr>
+          </table>
+        </div>
+
+        <figure class="figure">
+          <div class="img-placeholder tall" data-label="Photo: swerve-module.jpg">
+            <img src="../assets/images/swerve-module.jpg" alt="Detail of the swerve module shifter mechanism">
+          </div>
+          <figcaption class="caption">Detail of the ball-shifter and gear stack.</figcaption>
+        </figure>
+      </aside>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-brand">Reed McFarland</span>
+      <span><a href="mailto:rmcfarl3@vols.utk.edu">rmcfarl3@vols.utk.edu</a> &middot; 865-266-7691</span>
+      <span><a href="https://github.com/ReedMcfarland">GitHub</a> &middot; <a href="https://grabcad.com/reed_mcfarland-1">GrabCAD</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
